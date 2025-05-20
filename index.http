@@ -1,0 +1,94 @@
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "nombre": "Juan Coffe",
+    "email":"juan@gmail.com",
+    "contraseña": "onana"
+}
+
+###
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email": "juan@gmail.com",
+    "contraseña": "onana"
+}
+
+###
+POST http://localhost:3000/categories/add
+Content-Type: application/json
+
+{
+    "nombre":"Bebidas",
+    "usuario_id":1
+}
+
+###
+PUT http://localhost:3000/categories/edit
+Content-Type: application/json
+
+{
+    "nombre":"Comidas",
+    "usuario_id": 1
+}
+
+
+###
+GET http://localhost:3000/categories/?usuario_id=1
+Content-Type: application/json
+
+
+###
+DELETE  http://localhost:3000/categories/delete
+Content-Type: application/json
+
+{
+    "id":7,
+    "usuario_id": 1
+}
+
+
+###
+POST http://localhost:3000/orders/add
+Content-Type: application/json
+
+{
+    
+    "mesa_id": 1,
+    "comidas": [
+        {"comida_id": 1, "nombre": "Ensalada", "cantidad": 2, "precio_unitario": 10},
+        {"comida_id": 1, "nombre": "Pizza", "cantidad": 2, "precio_unitario": 10}
+    ],
+    "usuario_id":1
+}
+
+###
+GET http://localhost:3000/orders/?usuario_id=1
+Content-Type: application/json
+
+
+###
+GET http://localhost:3000/food/?usuario_id=1
+Content-Type: application/json
+
+
+###
+GET http://localhost:3000/tables/?usuario_id=1
+Content-Type: application/json
+
+
+###
+PUT http://localhost:3000/tables/edit
+Content-Type: application/json
+
+{
+    "numero":2,
+    "usuario_id": 1,
+    "id":1
+}
+
+###
+PUT http://localhost:3000/orders/edit?id=22
+Content-Type: application/json

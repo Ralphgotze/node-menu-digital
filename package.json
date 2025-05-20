@@ -1,0 +1,21 @@
+{
+  "name": "menu-digital",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Ralph",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "http": "^0.0.1-security",
+    "mysql2": "^3.14.1",
+    "nodemon": "^3.1.10",
+    "socket.io": "^4.8.1",
+    "ws": "^8.18.2"
+  }
+}
